@@ -1,7 +1,6 @@
 # What is included?
 * higher-order functions (function composition)
 * recursion
-* lazy evaluation (delay eval until needed, don't eval the same thing twice)
 * lambda functions
 * curried functions (unary functions that take multiple arguments but only one at a time)
 * functors (wrapping a value into a context and allowing mapping over this value (mapping: applying a funtion to a value to get another value))
