@@ -18,7 +18,7 @@
 
 ;; Define the supported alphabet as a list of characters to find the index for certain characters and vice versa
 (define alphabet '(#\A #\B #\C #\D #\E #\F #\G #\H #\I #\J #\K #\L #\M #\N #\O #\P #\Q #\R #\S #\T #\U #\V #\W #\X #\Y #\Z))
-;; Define the length of the alphabet here to enable lazy evaluation since it would otherwise be evaluated multiple times in this code
+;; Define the length of the alphabet here since it would otherwise be evaluated multiple times in this code
 (define alph-len (length alphabet))
 
 ;; Functor that decomposes a string to a char-list with uppercase letters
@@ -37,7 +37,7 @@
 (define shift
     (lambda (str)
         (lambda (shift-index) ;; Monad
-            ;; Define "char-list" by applying "dec-str" to the string to enable lazy evaluation
+            ;; Define "char-list" by applying "dec-str" to the string
             (define char-list (dec-str str))
             ;; Map the "find-val"-function to all the values in "char-list" using a list of it's length containing the shift index repeatedly
             ;; and then convert the result back to a string

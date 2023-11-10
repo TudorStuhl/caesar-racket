@@ -2,7 +2,7 @@
 
 (define alphabet '(#\A #\B #\C #\D #\E #\F #\G #\H #\I #\J #\K #\L #\M #\N #\O #\P #\Q #\R #\S #\T #\U #\V #\W #\X #\Y #\Z))
 
-;; Recursive function that passes the list, the value to search for, the index and the lst-len (for lazy evaluation)
+;; Recursive function that passes the list, the value to search for, the index and the lst-len
 ;; every iteration as long as the value is not already found and the index is not outside the list
 (define (search-list lst v index lst-len)
     (cond
